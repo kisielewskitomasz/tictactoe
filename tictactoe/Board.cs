@@ -3,9 +3,9 @@ namespace tictactoe
 {
     public struct Fields
     {
-        public static char Empty = ' ';
-        public static char X = 'X';
-        public static char O = 'O';
+        public const char Empty = ' ';
+        public const char X = 'X';
+        public const char O = 'O';
     }
 
     public class Board
@@ -28,7 +28,7 @@ namespace tictactoe
 
         public bool Put(int field, char sign)
         {
-            Console.WriteLine($"put: checking 0 < {field} > 8 ");
+            Console.WriteLine($"put: checking 0 <= {field} <= 8 ");
             if (field < 0 || field > 8)
                 return false;
             Console.WriteLine($"check if {_board[field]} is {Fields.Empty}");

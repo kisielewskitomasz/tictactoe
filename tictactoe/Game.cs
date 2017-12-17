@@ -26,6 +26,18 @@ namespace tictactoe
             return _currentPlayer;
         }
 
+        public int GetCurrentPlayerNo()
+        {
+            if (_currentPlayer == Fields.X)
+                return 0;
+            return 1;
+        }
+
+        public char GetWinner()
+        {
+            return _winner;
+        }
+
         public Board GetBoard()
         {
             return _board;
