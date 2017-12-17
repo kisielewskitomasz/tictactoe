@@ -1,7 +1,7 @@
 ﻿using System;
 namespace tictactoe
 {
-    public static class Fields
+    public struct Fields
     {
         public static char Empty = ' ';
         public static char X = 'X';
