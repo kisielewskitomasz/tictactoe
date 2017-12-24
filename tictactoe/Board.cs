@@ -28,13 +28,10 @@ namespace tictactoe
 
         public bool Put(int field, char sign)
         {
-            Console.WriteLine($"put: checking 0 <= {field} <= 8 ");
             if (field < 0 || field > 8)
                 return false;
-            Console.WriteLine($"check if {_board[field]} is {Fields.Empty}");
             if (_board[field] != Fields.Empty)
                 return false;
-            Console.WriteLine($"check sign: {sign}");
             if (sign != Fields.X && sign != Fields.O)
                 return false;
             

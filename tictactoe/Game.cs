@@ -45,15 +45,12 @@ namespace tictactoe
 
         public bool MakeMove(int field)
         {
-            Console.WriteLine("if end of game");
             if (_endOfGame)
                 return false;
 
-            Console.WriteLine($"puting player {_currentPlayer} in field {field}");
             if (!(_board.Put(field, _currentPlayer)))
                 return false;
 
-            Console.WriteLine("checking winner");
             if (CheckWinner())
             {
                 _winner = _currentPlayer;
@@ -61,7 +58,6 @@ namespace tictactoe
                 return true;
             }
 
-            Console.WriteLine("checking move available");
             if (!(_board.IsMoveAvailable()))
             {
                 _winner = Fields.Empty;
@@ -69,7 +65,6 @@ namespace tictactoe
                 return true;
             }
 
-            Console.WriteLine("swaping players");
             if (_currentPlayer == Fields.X)
                 _currentPlayer = Fields.O;
             else

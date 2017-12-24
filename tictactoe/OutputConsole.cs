@@ -3,10 +3,6 @@ namespace tictactoe
 {
     public class OutputConsole : IOutput
     {
-        public OutputConsole()
-        {
-        }
-
         public void ShowBoard(Board board)
         {
             char[] field = board.Get();
@@ -16,7 +12,7 @@ namespace tictactoe
                 if (field[i] == ' ')
                     field[i] = Convert.ToChar(i + 48);
             }
-
+            Console.WriteLine("");
             Console.WriteLine($" {field[0]} | {field[1]} | {field[2]} ");
             Console.WriteLine($"---+---+---");
             Console.WriteLine($" {field[3]} | {field[4]} | {field[5]} ");
