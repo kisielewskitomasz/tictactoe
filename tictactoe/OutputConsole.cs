@@ -9,7 +9,7 @@ namespace tictactoe
  
             for (int i = 0; i < 9; i++)
             {
-                if (field[i] == ' ')
+                if (field[i] == Fields.Empty)
                     field[i] = Convert.ToChar(i + 48);
             }
             Console.WriteLine("");
