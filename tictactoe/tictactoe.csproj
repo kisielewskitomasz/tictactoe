@@ -37,7 +37,6 @@
     <Compile Include="Board.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Harness.cs" />
-    <Compile Include="Output.cs" />
     <Compile Include="InputConsole.cs" />
     <Compile Include="OutputConsole.cs" />
     <Compile Include="IInput.cs" />

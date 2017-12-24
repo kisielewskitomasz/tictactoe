@@ -43,11 +43,6 @@ namespace tictactoe
             return _board;
         }
 
-        public void PrintBoard()
-        {
-            _board.Print();
-        }
-
         public bool MakeMove(int field)
         {
             Console.WriteLine("if end of game");

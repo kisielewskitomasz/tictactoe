@@ -6,7 +6,7 @@ namespace tictactoe
     {
         Game _game;
         IOutput _output;
-        IInput[] _input;
+        IInput[] _input = new IInput[2];
 
         public Harness(IOutput output, IInput inputPlayerFirst, IInput inputPlayerSecond)
         {

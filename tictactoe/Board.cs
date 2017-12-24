@@ -55,16 +55,7 @@ namespace tictactoe
 
         public char[] Get()
         {
-            return _board;
-        }
-
-        public void Print()
-        {
-            Console.WriteLine($" {_board[0]} | {_board[1]} | {_board[2]} ");
-            Console.WriteLine($"---+---+---");
-            Console.WriteLine($" {_board[3]} | {_board[4]} | {_board[5]} ");
-            Console.WriteLine($"---+---+---");
-            Console.WriteLine($" {_board[6]} | {_board[7]} | {_board[8]} ");
+            return (char[]) _board.Clone();
         }
     }
 }
