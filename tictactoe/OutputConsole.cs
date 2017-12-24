@@ -32,7 +32,7 @@ namespace tictactoe
 
         public void ShowMoveError(char currentPlayer, string codeError)
         {
-            Console.WriteLine($"Your move was invalid. Reason: {codeError}");
+            Console.WriteLine($"\nYour move was invalid. Reason: {codeError}");
         }
 
         public void ShowWelcome()

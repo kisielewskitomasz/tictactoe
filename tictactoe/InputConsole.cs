@@ -10,7 +10,7 @@ namespace tictactoe
             {
                 ConsoleKeyInfo key = Console.ReadKey();
                 move = int.Parse(key.KeyChar.ToString());
-                if (move < 0 || move > 9)
+                if (move < 0 || move > 8)
                     return -1;
                 return move;
             }
