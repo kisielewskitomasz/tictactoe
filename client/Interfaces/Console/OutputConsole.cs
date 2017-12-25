@@ -35,7 +35,7 @@ namespace tictactoe
             Console.WriteLine($"\nYour move was invalid. Reason: {codeError}");
         }
 
-        public void ShowWelcome()
+        public void ShowGreeting()
         {
             Console.WriteLine("Welcome in TicTacToe game");
         }

@@ -1,19 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace tictactoe
 {
     public class Game
     {
         bool _endOfGame;
-        char _currentPlayer;
+        int _currentPlayer;
         char _winner;
         Board _board;
+        List<Player> _playersList;
 
-        public Game()
+        public Game(List<Player> playersList)
         {
             _board = new Board();
-            _currentPlayer = Fields.X;
             _endOfGame = false;
             _winner = Fields.Empty;
+            _playersList = playersList;
+            _currentPlayer = 0;
         }
 
         public bool IsFinished()
@@ -23,14 +27,12 @@ namespace tictactoe
 
         public char GetCurrentPlayer()
         {
-            return _currentPlayer;
+            return _playersList[_currentPlayer].Sign;
         }
 
         public int GetCurrentPlayerNo()
         {
-            if (_currentPlayer == Fields.X)
-                return 0;
-            return 1;
+            return _currentPlayer;
         }
 
         public char GetWinner()
@@ -48,12 +50,12 @@ namespace tictactoe
             if (_endOfGame)
                 return false;
 
-            if (!(_board.Put(field, _currentPlayer)))
+            if (!(_board.Put(field, _playersList[_currentPlayer].Sign)))
                 return false;
 
             if (CheckWinner())
             {
-                _winner = _currentPlayer;
+                _winner = _playersList[_currentPlayer].Sign;
                 _endOfGame = true;
                 return true;
             }
@@ -65,10 +67,10 @@ namespace tictactoe
                 return true;
             }
 
-            if (_currentPlayer == Fields.X)
-                _currentPlayer = Fields.O;
+            if (_currentPlayer == 0)
+                _currentPlayer = 1;
             else
-                _currentPlayer = Fields.X;
+                _currentPlayer = 0;
 
             return true;
         }

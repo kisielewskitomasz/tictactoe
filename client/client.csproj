@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{822959D2-E0B1-45C2-BAF5-973938DB26D4}</ProjectGuid>
+    <ProjectGuid>{46FE166C-36F5-4CFA-924F-D46EF1AD16FA}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>tictactoe</RootNamespace>
-    <AssemblyName>tictactoe</AssemblyName>
+    <RootNamespace>client</RootNamespace>
+    <AssemblyName>client</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -34,23 +34,19 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Board.cs" />
-    <Compile Include="Game.cs" />
-    <Compile Include="Harness.cs" />
-    <Compile Include="NetworkServer.cs" />
-    <Compile Include="Interfaces\IInput.cs" />
-    <Compile Include="Interfaces\IOutput.cs" />
-    <Compile Include="Player.cs" />
+    <Compile Include="NetworkClient.cs" />
     <Compile Include="Interfaces\Console\InputConsole.cs" />
     <Compile Include="Interfaces\Console\OutputConsole.cs" />
-    <Compile Include="Interfaces\Network\InputNetworkServer.cs" />
-    <Compile Include="Interfaces\Network\OutputNetworkServer.cs" />
+    <Compile Include="Interfaces\IInput.cs" />
+    <Compile Include="Interfaces\IOutput.cs" />
+    <Compile Include="Interfaces\Network\InputNetworkClient.cs" />
+    <Compile Include="Interfaces\Network\OutputNetworkClient.cs" />
+    <Compile Include="Board.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Docs\" />
     <Folder Include="Interfaces\" />
-    <Folder Include="Interfaces\Console\" />
     <Folder Include="Interfaces\Network\" />
+    <Folder Include="Docs\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Docs\protocol.txt" />

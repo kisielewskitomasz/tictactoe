@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Sockets;
 
 namespace tictactoe
 {
@@ -7,22 +8,21 @@ namespace tictactoe
     {
         public static void Main(string[] args)
         {
-            Game game = new Game();
+            NetworkServer networkServer = new NetworkServer("0.0.0.0", 31337);
 
-            List<IInput> inputs = new List<IInput>
+            List<Player> players = new List<Player>
             {
-                new InputConsole(),
-                new InputConsole()
+                //LOCAL PLAY
+                //new Player(Fields.X, new InputConsole(), new OutputConsole()),
+                //new Player(Fields.O, new InputConsole(), new OutputConsole())
+                //NETWORK PLAY
+                new Player(Fields.X, new InputConsole(), new OutputConsole()),
+                new Player(Fields.O, new InputNetworkServer(networkServer), new OutputNetworkServer(networkServer))
             };
-            List<IOutput> outputs = new List<IOutput>
-            {
-                new OutputConsole(),
-                new OutputConsole()
-
-            };
-
-            Harness harness = new Harness(inputs, outputs);
+            Harness harness = new Harness(players);
             harness.StartGame();
+
+            networkServer.Stop();
         }
     }
 }

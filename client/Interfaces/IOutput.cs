@@ -3,7 +3,7 @@ namespace tictactoe
 {
     public interface IOutput
     {
-        void ShowWelcome();
+        void ShowGreeting();
 
         void ShowBoard(Board board);
 
