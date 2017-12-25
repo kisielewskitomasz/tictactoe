@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace tictactoe
 {
@@ -8,12 +9,19 @@ namespace tictactoe
         {
             Game game = new Game();
 
-            InputConsole inputConsolePlayerFirst = new InputConsole();
-            InputConsole inputConsolePlayerSecond = new InputConsole();
+            List<IInput> inputs = new List<IInput>
+            {
+                new InputConsole(),
+                new InputConsole()
+            };
+            List<IOutput> outputs = new List<IOutput>
+            {
+                new OutputConsole(),
+                new OutputConsole()
 
-            OutputConsole outputConsole = new OutputConsole();
+            };
 
-            Harness harness = new Harness(outputConsole, inputConsolePlayerFirst, inputConsolePlayerSecond);
+            Harness harness = new Harness(inputs, outputs);
             harness.StartGame();
         }
     }

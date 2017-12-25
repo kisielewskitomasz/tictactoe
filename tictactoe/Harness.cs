@@ -1,56 +1,73 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace tictactoe
 {
     public class Harness
     {
-        Game _game;
-        IOutput _output;
-        IInput[] _input = new IInput[2];
+        protected Game _game;
+        protected List<IInput> _input = new List<IInput>();
+        protected List<IOutput> _output = new List<IOutput>();
+        protected bool _hotseat;
 
-        public Harness(IOutput output, IInput inputPlayerFirst, IInput inputPlayerSecond)
+        public Harness(List<IInput> inputs, List<IOutput> outputs)
         {
             _game = new Game();
-            _output = output;
-            _input[0] = inputPlayerFirst;
-            _input[1] = inputPlayerSecond;
+            foreach (var input in inputs)
+                _input.Add(input);
+            foreach (var output in outputs)
+                _output.Add(output);
+
+            _hotseat |= _output[0].GetType() == _output[1].GetType();
         }
 
         public void StartGame()
         {
-            _output.ShowWelcome();
+            foreach (var output in _output)
+            {
+                output.ShowWelcome();
+                if (_hotseat) break;
+            }
 
             while (!(_game.IsFinished()))
             {
-                _output.ShowBoard(_game.GetBoard());
-
                 char currentPlayer = _game.GetCurrentPlayer();
+                int currentPlayerNo = _game.GetCurrentPlayerNo();
 
-                _output.ShowCurrentPlayer(currentPlayer);
+                foreach (var output in _output)
+                {
+                    output.ShowBoard(_game.GetBoard());
+                    output.ShowCurrentPlayer(currentPlayer);
+                    if (_hotseat) break;
+                }
 
                 while (true)
                 {
-                    int move = _input[_game.GetCurrentPlayerNo()].GetMove();
+                    int move = _input[currentPlayerNo].GetMove();
                     if (move == -1)
                     {
-                        _output.ShowMoveError(currentPlayer, "INVALID_FIELD");
+                        _output[currentPlayerNo].ShowMoveError(currentPlayer, "INVALID_FIELD");
                         continue;
                     }
 
                     if (_game.MakeMove(move) == false)
                     {
-                        _output.ShowMoveError(currentPlayer, "OCCUPIED_FIELD");
+                        _output[currentPlayerNo].ShowMoveError(currentPlayer, "OCCUPIED_FIELD");
                         continue;
                     }
                     break;
                 }
             }
 
-            _output.ShowBoard(_game.GetBoard());
-            if (_game.CheckWinner())
-                _output.ShowWinner(_game.GetWinner());
-            else
-                _output.ShowDraw();
+            foreach (var output in _output)
+            {
+                output.ShowBoard(_game.GetBoard());
+                if (_game.CheckWinner())
+                    output.ShowWinner(_game.GetWinner());
+                else
+                    output.ShowDraw();
+                if (_hotseat) break;
+            }
         }
     }
 }
