@@ -1,5 +1,5 @@
 ﻿using System;
-namespace tictactoe
+namespace client
 {
     public class InputConsole : IInput
     {

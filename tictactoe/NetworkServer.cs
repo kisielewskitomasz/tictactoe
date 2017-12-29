@@ -6,8 +6,6 @@ namespace tictactoe
 {
     public class NetworkServer
     {
-        public IPAddress IpAddress { get => _ipAddress; set => _ipAddress = value; }
-        public TcpListener TcpListener { get => _tcpListener; set => _tcpListener = value; }
         public TcpClient TcpClient { get => _tcpClient; set => _tcpClient = value; }
 
         IPAddress _ipAddress;
@@ -16,10 +14,10 @@ namespace tictactoe
 
         public NetworkServer(string adressIp, int port)
         {
-            IpAddress = IPAddress.Parse(adressIp);
+            _ipAddress = IPAddress.Parse(adressIp);
             try
             {
-                _tcpListener = new TcpListener(IpAddress, port);
+                _tcpListener = new TcpListener(_ipAddress, port);
                 _tcpListener.Start(1);
                 Console.WriteLine($"Waiting for connection: {_ipAddress}:{port}");
                 _tcpClient = _tcpListener.AcceptTcpClient();
@@ -37,6 +35,5 @@ namespace tictactoe
             _tcpClient.Close();
             _tcpClient.Dispose();
         }
-
     }
 }

@@ -6,7 +6,11 @@ namespace client
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            NetworkClient networkClient = new NetworkClient("127.0.0.1", 31337);
+                
+
+
+            networkClient.Stop();
         }
     }
 }

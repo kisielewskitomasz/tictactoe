@@ -47,6 +47,7 @@
     <Folder Include="Interfaces\" />
     <Folder Include="Interfaces\Network\" />
     <Folder Include="Docs\" />
+    <Folder Include="Handlers\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Docs\protocol.txt" />

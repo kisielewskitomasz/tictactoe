@@ -1,5 +1,5 @@
 ﻿using System;
-namespace tictactoe
+namespace client
 {
     public interface IOutput
     {

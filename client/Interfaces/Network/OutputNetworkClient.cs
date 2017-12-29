@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace tictactoe
+namespace client
 {
     public class OutputNetworkClient : IOutput
     {

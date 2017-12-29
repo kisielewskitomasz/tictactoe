@@ -15,6 +15,7 @@ namespace tictactoe
                 //LOCAL PLAY
                 //new Player(Fields.X, new InputConsole(), new OutputConsole()),
                 //new Player(Fields.O, new InputConsole(), new OutputConsole())
+
                 //NETWORK PLAY
                 new Player(Fields.X, new InputConsole(), new OutputConsole()),
                 new Player(Fields.O, new InputNetworkServer(networkServer), new OutputNetworkServer(networkServer))
