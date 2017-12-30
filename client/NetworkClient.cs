@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Net;
+using System.Text;
 using System.Net.Sockets;
 
 namespace client
@@ -15,15 +15,16 @@ namespace client
             try
             {
                 Console.WriteLine($"client connecting to: {adressIp}:{port}");
-                TcpClient = new TcpClient(adressIp, port);
+                _tcpClient = new TcpClient(adressIp, port);
 
-                Console.WriteLine("Player 2 connected:");
+                Console.WriteLine("Connected as player 2!");
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.ToString());
             }
         }
+
 
         public void Stop()
         {

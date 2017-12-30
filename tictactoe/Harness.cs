@@ -41,13 +41,13 @@ namespace tictactoe
                     int move = _playersList[currentPlayerNo].Input.GetMove();
                     if (move == -1)
                     {
-                        _playersList[currentPlayerNo].Output.ShowMoveError(currentPlayer, "INVALID_FIELD");
+                        _playersList[currentPlayerNo].Output.ShowMoveError(currentPlayer, "INV");
                         continue;
                     }
 
                     if (_game.MakeMove(move) == false)
                     {
-                        _playersList[currentPlayerNo].Output.ShowMoveError(currentPlayer, "OCCUPIED_FIELD");
+                        _playersList[currentPlayerNo].Output.ShowMoveError(currentPlayer, "OCC");
                         continue;
                     }
                     break;

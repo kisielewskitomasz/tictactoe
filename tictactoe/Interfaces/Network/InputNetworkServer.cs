@@ -21,7 +21,8 @@ namespace tictactoe
             bytes = _network.TcpClient.Client.Receive(buff); // in future - add errors handling
             move = int.Parse(buff[1].ToString());
             move -= 48;
-            // #TODO check if move is in 0-9
+            if (move < 0 || move > 8)
+                return -1;
             return move;
         }
     }
