@@ -24,6 +24,9 @@ namespace tictactoe
             harness.StartGame();
 
             networkServer.Stop();
+
+            Console.WriteLine("Press any key to close...");
+            Console.ReadKey();
         }
     }
 }

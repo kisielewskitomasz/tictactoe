@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tictactoe", "tictactoe\tictactoe.csproj", "{822959D2-E0B1-45C2-BAF5-973938DB26D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tictactoe.client", "client\tictactoe.client.csproj", "{46FE166C-36F5-4CFA-924F-D46EF1AD16FA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tictactoeclient", "client\tictactoeclient.csproj", "{46FE166C-36F5-4CFA-924F-D46EF1AD16FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

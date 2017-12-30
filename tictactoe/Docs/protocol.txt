@@ -21,7 +21,7 @@ S --> C ShowDraw
 'D'
 
 S --> C ShowMoveError
-'E' byte('X', 'O') 15 * byte()
+'E' byte('X', 'O') 3 * byte('INV', 'OCC')
 
 S --> C ShowGreeting
 'G'
