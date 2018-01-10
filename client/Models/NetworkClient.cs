@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text;
 using System.Net.Sockets;
 
 namespace client
@@ -10,14 +9,14 @@ namespace client
 
         TcpClient _tcpClient;
 
-        public NetworkClient(string adressIp, int port)
+        public NetworkClient(string serverAdressIp, int port)
         {
             try
             {
-                Console.WriteLine($"client connecting to: {adressIp}:{port}");
-                _tcpClient = new TcpClient(adressIp, port);
+                Console.WriteLine($"client connecting to: {serverAdressIp}:{port}");
+                _tcpClient = new TcpClient(serverAdressIp, port);
 
-                Console.WriteLine("Connected as player 2!");
+                Console.WriteLine("connected as player 2!");
             }
             catch (Exception e)
             {

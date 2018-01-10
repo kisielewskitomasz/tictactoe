@@ -14,16 +14,16 @@ namespace tictactoe
 
         public int GetMove()
         {
-            int move;
-            int bytes;
             byte[] buff = new byte[16];
             _network.TcpClient.Client.Send(Encoding.UTF8.GetBytes("M"));
-            bytes = _network.TcpClient.Client.Receive(buff); // in future - add errors handling
-            move = int.Parse(buff[1].ToString());
-            move -= 48;
-            if (move < 0 || move > 8)
+            int bytes = _network.TcpClient.Client.Receive(buff); // in future - add errors handling
+            int move = -1;
+            if (!(int.TryParse(buff[1].ToString(), out move)))
                 return -1;
-            return move;
+            move -= 48;
+            if (move >= 0 && move <= 8)
+                return move;
+            return -1;
         }
     }
 }
