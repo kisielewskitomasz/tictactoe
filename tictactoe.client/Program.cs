@@ -5,7 +5,7 @@ namespace client
 {
     class MainClass
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
             const string ip = "127.0.0.1";
 

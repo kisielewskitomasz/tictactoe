@@ -6,7 +6,7 @@ namespace tictactoe
 {
     class MainClass
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
             NetworkServer networkServer = new NetworkServer("0.0.0.0", 31337);
 
