@@ -1,0 +1,32 @@
+﻿
+S - server
+C - client
+
+byte 0: id packet
+------------------------------
+
+S --> C GetMove request
+'M'
+
+S <-- C GetMove response
+'m' byte(0-8)
+
+S --> C ShowBoard
+'B' 9 * byte(' ', 'X', 'O')
+
+S --> C ShowCurrentPlayer
+'C' byte('X', 'O')
+
+S --> C ShowDraw
+'D'
+
+S --> C ShowMoveError
+'E' byte('X', 'O') 3 * byte('INV', 'OCC')
+
+S --> C ShowGreeting
+'G'
+
+S --> C ShowWinner
+'W' byte('X', 'O')
+
+
