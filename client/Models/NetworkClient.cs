@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Sockets;
+using System.Threading;
 
 namespace client
 {
@@ -14,6 +15,7 @@ namespace client
             try
             {
                 Console.WriteLine($"client connecting to: {serverAdressIp}:{port}");
+
                 _tcpClient = new TcpClient(serverAdressIp, port);
 
                 Console.WriteLine("connected as player 2!");

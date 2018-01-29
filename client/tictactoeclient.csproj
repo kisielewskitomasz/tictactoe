@@ -34,23 +34,17 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Interfaces\IInput.cs" />
-    <Compile Include="Interfaces\IOutput.cs" />
-    <Compile Include="Models\Player.cs" />
     <Compile Include="Models\NetworkHandler.cs" />
     <Compile Include="Models\NetworkClient.cs" />
-    <Compile Include="Models\Board.cs" />
-    <Compile Include="Models\Console\InputConsole.cs" />
-    <Compile Include="Models\Console\OutputConsole.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Docs\" />
     <Folder Include="Models\" />
-    <Folder Include="Models\Console\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Docs\protocol.txt" />
+    <ProjectReference Include="..\tictactoe\tictactoe.csproj">
+      <Project>{822959D2-E0B1-45C2-BAF5-973938DB26D4}</Project>
+      <Name>tictactoe</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

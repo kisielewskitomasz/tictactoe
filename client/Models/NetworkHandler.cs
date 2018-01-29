@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Net.Sockets;
 using System.Text;
+using tictactoe;
 
 namespace client
 {
@@ -20,7 +22,18 @@ namespace client
             while (mainLoop)
             {
                 byte[] buf = new byte[1];
-                int bytes = _networkClient.TcpClient.Client.Receive(buf, 1, System.Net.Sockets.SocketFlags.None);
+                try
+                {
+                    if (_networkClient.TcpClient.Client == null)
+                        Console.WriteLine("3");
+
+                    int bytes = _networkClient.TcpClient.Client.Receive(buf, 1, System.Net.Sockets.SocketFlags.None);
+                }
+                catch (SocketException se)
+                {
+                    Console.WriteLine("se error:");
+                    Console.WriteLine(se);
+                }
                 char recivedOperation = Encoding.UTF8.GetChars(buf)[0];
 
                 switch (recivedOperation)
