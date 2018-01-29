@@ -41,9 +41,9 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\tictactoe\tictactoe.csproj">
+    <ProjectReference Include="..\tictactoe.client\tictactoe.client.csproj">
       <Project>{822959D2-E0B1-45C2-BAF5-973938DB26D4}</Project>
-      <Name>tictactoe</Name>
+      <Name>tictactoe.client</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
