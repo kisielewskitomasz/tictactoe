@@ -45,6 +45,10 @@
     <Compile Include="Models\Network\OutputNetworkServer.cs" />
     <Compile Include="Models\Console\InputConsole.cs" />
     <Compile Include="Models\Console\OutputConsole.cs" />
+    <Compile Include="Models\AI\InputOutputAIEasy.cs" />
+    <Compile Include="Models\AI\InputOutputAIBase.cs" />
+    <Compile Include="Models\AI\InputOutputAIMedium.cs" />
+    <Compile Include="Models\AI\InputOutputAIHard.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Docs\" />
@@ -52,6 +56,7 @@
     <Folder Include="Models\" />
     <Folder Include="Models\Network\" />
     <Folder Include="Models\Console\" />
+    <Folder Include="Models\AI\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Docs\protocol.txt" />
