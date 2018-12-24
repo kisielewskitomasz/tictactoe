@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tictactoe.host", "tictactoe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tictactoe.client", "tictactoe.client\tictactoe.client.csproj", "{46FE166C-36F5-4CFA-924F-D46EF1AD16FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tictactoe.common", "tictactoe.common\tictactoe.common.csproj", "{A7DD2033-C54F-4A1C-99A9-B1C4B060BABD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -19,5 +21,9 @@ Global
 		{46FE166C-36F5-4CFA-924F-D46EF1AD16FA}.Debug|x86.Build.0 = Debug|x86
 		{46FE166C-36F5-4CFA-924F-D46EF1AD16FA}.Release|x86.ActiveCfg = Release|x86
 		{46FE166C-36F5-4CFA-924F-D46EF1AD16FA}.Release|x86.Build.0 = Release|x86
+		{A7DD2033-C54F-4A1C-99A9-B1C4B060BABD}.Debug|x86.ActiveCfg = Debug|x86
+		{A7DD2033-C54F-4A1C-99A9-B1C4B060BABD}.Debug|x86.Build.0 = Debug|x86
+		{A7DD2033-C54F-4A1C-99A9-B1C4B060BABD}.Release|x86.ActiveCfg = Release|x86
+		{A7DD2033-C54F-4A1C-99A9-B1C4B060BABD}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 EndGlobal

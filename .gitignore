@@ -38,3 +38,5 @@ Thumbs.db
 
 # dotCover
 *.dotCover
+.vs/tictactoe/xs/UserPrefs.xml
+.vs/tictactoe/xs/UserPrefs.xml

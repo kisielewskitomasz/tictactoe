@@ -1,17 +1,15 @@
-﻿<Properties StartupConfiguration="{822959D2-E0B1-45C2-BAF5-973938DB26D4}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="tictactoe.host/Models/AI/InputOutputAIMedium.cs">
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{822959D2-E0B1-45C2-BAF5-973938DB26D4}|Default">
+  <MonoDevelop.Ide.ItemProperties.tictactoe.host PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="tictactoe Status">
     <Files>
-      <File FileName="tictactoe.host/Program.cs" Line="14" Column="41" />
-      <File FileName="tictactoe.host/Models/AI/InputOutputAIMedium.cs" Line="13" Column="10" />
-      <File FileName="tictactoe.host/Models/AI/InputOutputAIHard.cs" Line="16" Column="25" />
+      <File FileName="tictactoe.client/Program.cs" Line="17" Column="34" />
+      <File FileName="tictactoe Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.tictactoe.client PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.tictactoe.host PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>

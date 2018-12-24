@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{46FE166C-36F5-4CFA-924F-D46EF1AD16FA}</ProjectGuid>
+    <ProjectGuid>{A7DD2033-C54F-4A1C-99A9-B1C4B060BABD}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>client</RootNamespace>
-    <AssemblyName>client</AssemblyName>
+    <RootNamespace>tictactoe.common</RootNamespace>
+    <AssemblyName>tictactoe.common</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -34,17 +34,24 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\NetworkHandler.cs" />
-    <Compile Include="Models\NetworkClient.cs" />
+    <Compile Include="Models\Player.cs" />
+    <Compile Include="Interfaces\IInput.cs" />
+    <Compile Include="Interfaces\IOutput.cs" />
+    <Compile Include="Models\Fields.cs" />
+    <Compile Include="Models\Console\InputConsole.cs" />
+    <Compile Include="Models\Console\OutputConsole.cs" />
+    <Compile Include="Models\Board.cs" />
+    <Compile Include="Models\Game.cs" />
+    <Compile Include="Models\Harness.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Docs\" />
+    <Folder Include="Models\Console\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\tictactoe.common\tictactoe.common.csproj">
-      <Project>{A7DD2033-C54F-4A1C-99A9-B1C4B060BABD}</Project>
-      <Name>tictactoe.common</Name>
-    </ProjectReference>
+    <None Include="Docs\protocol.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

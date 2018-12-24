@@ -1,4 +1,6 @@
 ﻿using System;
+using tictactoe;
+
 namespace tictactoe
 {
     public interface IOutput
